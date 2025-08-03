@@ -88,6 +88,7 @@ npm install
 ```bash
 npm run build
 ```
+**(This will automatically create the node_modules folder and install all the required dependencies listed in package.json.)**
 
 ### 4️⃣ Load in Chrome
 
