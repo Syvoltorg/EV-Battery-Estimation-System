@@ -73,8 +73,8 @@ BMS-Browser-Extension/
 ### 1️⃣ Clone Repository
 
 ```bash
-git clone https://github.com/Syvoltorg/EV-Battery-Estimation-System.git
-cd EV-Battery-Estimation-System
+git clone https://github.com/Syvoltorg/EV-Battery-Estimation-System-Extension.git
+cd EV-Battery-Estimation-System-Extension
 ```
 
 ### 2️⃣ Install Dependencies
