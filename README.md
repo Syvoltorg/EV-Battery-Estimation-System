@@ -142,4 +142,4 @@ Preview of the EV Battery Estimation System (BMS Extension) side panel:
 ## 📜 License
 
 This project is licensed under the GPL v3 License.
-See the LICENSE file for full details.
+See the [LICENSE](LICENSE) file for full details.
