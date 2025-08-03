@@ -123,8 +123,8 @@ Preview of the EV Battery Estimation System (BMS Extension) side panel:
 
 <p align="center">
   <img src="screenshots/Intro.png" alt="Intro – Clean and minimal starting interface" width="220"/>
-  <img src="screenshots/Selected_vehicle.png" alt="Selected Vehicle and SoH – Choose your EV for energy estimation" width="220"/>
   <img src="screenshots/Vehicle_details.png" alt="Vehicle Details – Battery specs, SoH, and weight for accurate calculations" width="220"/>
+  <img src="screenshots/Selected_vehicle.png" alt="Selected Vehicle and SoH – Choose your EV for energy estimation" width="220"/>
   <img src="screenshots/Location_input.png" alt="Location Input – Enter start and destination for route planning" width="220"/>
   <img src="screenshots/Map.png" alt="Map – Optimized route with traffic, weather, and charging stations" width="220"/>
   <img src="screenshots/Charging_stations.png" alt="Charging Stations – Categorized as Public, Guest-only, Showroom, or Unverified" width="220"/>
