@@ -1,0 +1,1128 @@
+/* EV Charge Zones heading and list spacing */
+.ev-charge-zones-section h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #23262f;
+  margin-bottom: 1.3em;
+  letter-spacing: 0.01em;
+}
+.ev-charge-zones-list {
+  margin-top: 0 !important;
+  margin-bottom: 32px !important;
+}
+/* Utility: Remove bullets and left padding from any ul/li (for EV Charge Zones) */
+.no-bullets,
+.no-bullets ul,
+.no-bullets li {
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+/* Optional: Style EV Charge Zones list to look clean and modern */
+.ev-charge-zones-list {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 0 24px 0 !important;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.ev-charge-zones-list li {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px 0 rgba(0,0,0,0.04);
+  padding: 12px 18px 10px 18px;
+  font-size: 1.04rem;
+  color: #23262f;
+  font-weight: 500;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  border: none;
+}
+.ev-charge-zones-list li strong {
+  font-weight: 800;
+  color: #111;
+}
+.ev-charge-zones-list li .station-icon {
+  font-size: 1.2em;
+  margin-right: 0.4em;
+}
+@media (max-width: 600px) {
+  .ev-charge-zones-list li {
+    padding: 8px 8px 8px 10px;
+    font-size: 0.97rem;
+  }
+}
+/* --- Route Summary Info Cards Layout --- */
+.route-summary-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 0 0 32px 0;
+  width: 100vw;
+  max-width: 100vw;
+  box-sizing: border-box;
+}
+
+.route-summary-left {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  min-width: 260px;
+  max-width: 100vw;
+  width: 100%;
+}
+
+/* Route summary card - black/white theme */
+.route-summary-card {
+  background: #fff;
+  border-radius: 38px;
+  box-shadow: 0 6px 32px 0 rgba(0,0,0,0.08);
+  padding: 32px 38px 28px 38px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 220px;
+  min-height: 90px;
+  border: 2px solid #111;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Route summary label/value - black/white theme */
+.route-summary-label {
+  color: #111;
+  font-size: 1.18rem;
+  font-weight: 500;
+  margin-bottom: 6px;
+  font-family: 'Quicksand', 'Inter', sans-serif;
+}
+.route-summary-value {
+  color: #111;
+  font-size: 2.1rem;
+  font-weight: 700;
+  font-family: 'Quicksand', 'Inter', sans-serif;
+  letter-spacing: 0.01em;
+}
+
+/* --- Battery Required Card --- */
+/* Battery required card - black/white theme */
+.battery-required-card {
+  background: #111;
+  border-radius: 38px;
+  box-shadow: 0 8px 40px 0 rgba(0,0,0,0.13);
+  color: #fff;
+  min-width: 340px;
+  min-height: 210px;
+  padding: 38px 44px 32px 44px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+  border: 2px solid #fff;
+  width: 100%;
+  max-width: 100vw;
+  box-sizing: border-box;
+  margin: 0 auto 24px auto;
+  transition: max-width 0.3s, width 0.3s;
+}
+
+@media (min-width: 1200px) {
+  .battery-required-card {
+    width: 100vw;
+    max-width: 100vw;
+    border-radius: 38px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+.battery-required-label {
+  color: #fff;
+  font-size: 1.45rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+  font-family: 'Quicksand', 'Inter', sans-serif;
+}
+.battery-required-value {
+  color: #fff;
+  font-size: 3.1rem;
+  font-weight: 700;
+  margin-bottom: 2px;
+  font-family: 'Quicksand', 'Inter', sans-serif;
+  letter-spacing: 0.01em;
+}
+.battery-required-caption {
+  color: #e5e7eb;
+  font-size: 1.13rem;
+  font-weight: 400;
+  font-family: 'Quicksand', 'Inter', sans-serif;
+}
+
+@media (max-width: 600px) {
+  .battery-required-value {
+    font-size: 2.1rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .route-summary-container {
+    flex-direction: column;
+    gap: 24px;
+    align-items: stretch;
+  }
+  .battery-required-card {
+    min-width: 0;
+    width: 100%;
+    padding: 28px 10px 24px 10px;
+  }
+  .route-summary-left {
+    min-width: 0;
+    max-width: 100%;
+    gap: 18px;
+  }
+  .route-summary-card {
+    min-width: 0;
+    width: 100%;
+    padding: 22px 14px 18px 14px;
+    border-radius: 22px;
+  }
+}
+/* Compact Info Boxes for Distance, Travel Time, Weather */
+.station-info-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 4px;
+}
+/* Info box - black/white theme */
+.station-info-box {
+  background: #fff;
+  border-radius: 7px;
+  padding: 4px 10px 3px 10px;
+  font-size: 0.93rem;
+  font-weight: 600;
+  color: #111;
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  line-height: 1.2;
+  box-shadow: none;
+  border: 1.5px solid #111;
+}
+/* Info label/value - black/white theme */
+.station-info-label {
+  font-size: 0.91rem;
+  font-weight: 500;
+  color: #111;
+  margin-right: 4px;
+}
+.station-info-value {
+  font-size: 0.93rem;
+  font-weight: 700;
+  color: #111;
+}
+@media (max-width: 600px) {
+  .station-info-row {
+    gap: 6px;
+  }
+  .station-info-box {
+    padding: 3px 6px 2px 6px;
+    font-size: 0.85rem;
+    border-radius: 5px;
+  }
+  .station-info-label, .station-info-value {
+    font-size: 0.83rem;
+  }
+}
+/* Charging Stations List - Modern Card Style, No Bullets, Black & White Theme */
+.charging-stations-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 24px;
+  margin: 24px 0 24px 0;
+  padding: 0;
+  width: 100%;
+  max-width: 1000px;
+  list-style: none !important;
+  background: none;
+}
+.charging-station-list-item {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.07);
+  padding: 22px 26px 18px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border: none;
+  transition: box-shadow 0.18s, background 0.18s;
+  position: relative;
+}
+.charging-station-list-item:hover {
+  box-shadow: 0 6px 22px 0 rgba(0,0,0,0.13);
+  background: #f7f8fa;
+}
+.charging-station-list-title {
+  font-size: 1.13rem;
+  font-weight: 800;
+  color: #23262f;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-bottom: 2px;
+  letter-spacing: 0.01em;
+}
+.charging-station-list-address {
+  color: #444;
+  font-size: 1.01rem;
+  font-weight: 500;
+  margin-bottom: 2px;
+  letter-spacing: 0.01em;
+}
+.charging-station-list-distance {
+  color: #7b818a;
+.charging-station-list-title .station-icon {
+  font-size: 1.2em;
+  margin-right: 0.2em;
+}
+@media (max-width: 900px) {
+  .charging-stations-list {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}
+@media (max-width: 600px) {
+  .charging-stations-list {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 0 1px;
+  }
+  .charging-station-list-item {
+    padding: 12px 8px 10px 10px;
+    border-radius: 12px;
+  }
+  .charging-station-list-title {
+    font-size: 0.98rem;
+  }
+}
+
+@media (min-width: 700px) {
+  .charging-stations-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px 24px;
+    padding: 0;
+  }
+}
+
+/* Charging Station Card Style - black/white theme */
+/* Charging Stations List - Modern Card Style, No Bullets, Black & White Theme */
+.charging-stations-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+  margin: 18px 0 18px 0;
+  padding: 0;
+  list-style: none;
+}
+.charging-station-list-item {
+  background: #fff;
+  border: 1.5px solid #222;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  padding: 18px 22px 14px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-size: 1.04rem;
+  color: #111;
+  transition: box-shadow 0.2s, border 0.2s;
+}
+.charging-station-list-item:hover {
+  box-shadow: 0 4px 18px rgba(0,0,0,0.13);
+  border: 1.5px solid #000;
+}
+.charging-station-list-title {
+  font-weight: 700;
+  font-size: 1.12em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #000;
+}
+.charging-station-list-address {
+  font-size: 1em;
+  color: #444;
+  margin-top: 2px;
+  font-weight: 400;
+}
+.charging-station-list-distance {
+  font-size: 0.95em;
+  color: #888;
+  margin-top: 2px;
+}
+.station-icon {
+  font-size: 1.25em;
+  margin-right: 6px;
+}
+@media (max-width: 600px) {
+  .charging-stations-list {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .charging-station-list-item {
+    padding: 14px 10px 10px 14px;
+    font-size: 0.98rem;
+  }
+  .charging-station-list-title {
+    font-size: 1em;
+  }
+}
+  font-size: 0.97rem;
+  font-weight: 500;
+  margin-top: 2px;
+  letter-spacing: 0.01em;
+}
+
+.charging-station-card:hover .charging-station-distance {
+  color: #e5e7eb;
+}
+.charging-station-title .station-icon {
+  font-size: 1.2em;
+  margin-right: 0.2em;
+}
+
+/* Charging Station Card Style */
+
+
+
+.charging-station-card {
+  background: #fcfcfd;
+  border-radius: 18px;
+  border: 1.7px solid #e0e3e8;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.07);
+  padding: 22px 26px 20px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 0;
+  transition: box-shadow 0.18s, border-color 0.18s, background 0.18s;
+}
+.charging-station-card:hover {
+  background: #f3f6fa;
+  box-shadow: 0 6px 22px 0 rgba(0,0,0,0.13);
+  border-color: #b0b6be;
+}
+
+
+.charging-station-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #222;
+  margin-bottom: 2px;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  letter-spacing: 0.01em;
+}
+
+
+.charging-station-address {
+  color: #444;
+  font-size: 1.01rem;
+  font-weight: 500;
+  margin-bottom: 2px;
+  letter-spacing: 0.01em;
+}
+
+
+.charging-station-distance {
+  color: #6b7280;
+  font-size: 0.97rem;
+  font-weight: 500;
+  margin-top: 2px;
+  letter-spacing: 0.01em;
+
+}
+
+/* Icon style for station type */
+.charging-station-title .station-icon {
+  font-size: 1.2em;
+  margin-right: 0.2em;
+}
+
+@media (max-width: 600px) {
+  .charging-stations-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 0 1px;
+  }
+  .charging-station-card {
+    padding: 10px 6px 8px 8px;
+    border-radius: 11px;
+    border-width: 1.2px;
+  }
+  .charging-station-title {
+    font-size: 1rem;
+  }
+  .route-summary-card, .battery-required-card {
+    min-width: 0;
+    width: 100%;
+    padding: 16px 6px 12px 6px;
+    border-radius: 18px;
+  }
+}
+/* Modern EV Battery Estimator - Page5 Styles */
+
+/* Import Inter font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+/* Import Quicksand font for consistency with Page 4 */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, .chatbot-container, .chat-bubble, .chat-input-area, .input-box, #chat-input, #send-btn, .chat-btn-suggestion {
+  font-family: 'Quicksand', sans-serif !important;
+}
+
+body {
+  font-family: 'Inter', 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #fff;
+  color: #111;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Main container */
+main {
+  background: #fff;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Force chat section to align left */
+main > section:nth-child(2) {
+  align-self: flex-start !important;
+  width: 100% !important;
+  max-width: none !important;
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+}
+
+/* Card-style containers */
+.card-container {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Apply card styling to existing sections */
+#vehicleInfo,
+.route-form-section,
+#resultsSection {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Expand sections to full width on larger screens */
+@media (min-width: 1200px) {
+  .route-summary-container {
+    width: 100vw;
+    max-width: 100vw;
+    gap: 60px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .route-summary-left {
+    max-width: 40vw;
+    width: 40vw;
+  }
+  .route-summary-card {
+    max-width: 100%;
+    width: 100%;
+  }
+  .battery-required-card {
+    max-width: 40vw;
+    width: 40vw;
+  }
+}
+
+/* Typography */
+h1, h2 {
+  font-weight: 600;
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+/* Vehicle Info Section */
+.vehicle-info-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.vehicle-info-item {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the spans inside vehicle info items */
+.vehicle-info-item span {
+  font-weight: 400 !important;
+  color: #333 !important;
+}
+
+/* Responsive two-column layout for larger screens */
+@media (min-width: 768px) {
+  .vehicle-info-list {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 12px 24px !important;
+    align-items: start !important;
+  }
+  
+  .vehicle-info-item {
+    margin-bottom: 0 !important;
+  }
+}
+
+/* Battery SoH styling */
+.vehicle-soh {
+  color: #15803d !important;
+  font-weight: 600;
+}
+
+/* Chat Section */
+/* Custom chat section styling */
+.chat-section-custom {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  align-items: flex-start;
+  padding: 0;
+  max-width: none;
+}
+
+.chat-messages {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  padding-bottom: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  max-height: 420px;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+  align-items: flex-start;
+  width: 100%;
+  background: #fff;
+  border-radius: 1rem;
+  border: none;
+  box-shadow: none;
+  margin-bottom: 1.2rem;
+}
+
+/* User response container should allow right alignment */
+#userResponseContainer {
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-end !important;
+}
+
+/* Force any content in user response container to be right-aligned */
+#userResponseContainer > * {
+  margin-left: auto !important;
+  margin-right: 0.5rem !important;
+  align-self: flex-end !important;
+}
+
+/* If user response is not a chat bubble, style it like one */
+#userResponseContainer .user-response {
+  background: #fff !important;
+  color: #111 !important;
+  border: 1.2px solid #111 !important;
+  border-radius: 1.2rem !important;
+  border-bottom-right-radius: 0.3rem !important;
+  padding: 0.7rem 1.1rem !important;
+  font-size: 1rem !important;
+  line-height: 1.4 !important;
+  width: fit-content !important;
+  margin-left: auto !important;
+  margin-right: 0.5rem !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04) !important;
+}
+
+.chat-bubble {
+  width: fit-content;
+  padding: 0.7rem 1.1rem;
+  border-radius: 1.2rem;
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 0.2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  word-break: break-word;
+  word-wrap: break-word;
+  box-sizing: border-box;
+  opacity: 0;
+  animation: fadeInBubble 0.5s ease forwards;
+  max-width: calc(100% - 5rem);
+  margin-left: 0;
+  margin-right: 0;
+  border: 1.2px solid #e5e7eb;
+}
+
+@keyframes fadeInBubble {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: none; }
+}
+
+.chat-bubble.bot {
+  background: #fff;
+  color: #111;
+  border-bottom-left-radius: 0.3rem;
+  margin-left: 0;
+  margin-right: auto;
+  border: 1.2px solid #e5e7eb;
+}
+.chat-bubble.user {
+  background: #fff;
+  color: #111;
+  border-bottom-right-radius: 0.3rem;
+  margin-left: auto;
+  margin-right: 1.5rem;
+  border: 1.2px solid #111;
+}
+
+.chat-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  align-items: center;
+  box-sizing: border-box;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Form Section */
+.route-form-responsive {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.route-form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+/* Form fields */
+label {
+  display: block;
+  font-weight: 600;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto 0.3rem auto;
+  background: #fff;
+  color: #111;
+  border: 1.2px solid #e5e7eb;
+  border-radius: 0.4rem;
+  padding: 0.5rem 0.8rem;
+  font-size: 0.98rem;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+  outline: none;
+  border-color: #111;
+  box-shadow: 0 0 0 2px #1112;
+}
+
+/* Error state for inputs */
+input.error,
+select.error {
+  border-color: #dc3545;
+}
+
+/* Buttons */
+button {
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Primary buttons (Calculate Route) */
+#calculateBtn,
+button[type="submit"] {
+  background: #000;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  width: 100%;
+  margin-top: 8px;
+}
+
+#calculateBtn:hover,
+button[type="submit"]:hover {
+  background: #333;
+}
+
+/* Chat suggestion buttons */
+  .chat-btn-suggestion {
+    background: #fff;
+    color: #111;
+    border: 1.2px solid #111;
+    border-radius: 0.7rem;
+    padding: 0.7rem 2.2rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-top: 1.2rem;
+    margin-bottom: 0.2rem;
+    cursor: pointer;
+    box-shadow: none;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+  }
+
+@media (max-width: 600px) {
+  .chat-btn-suggestion {
+    max-width: 320px;
+    width: 90%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+  .chat-btn-suggestion:hover {
+    background: #111;
+    color: #fff;
+    border: 1.2px solid #111;
+  }
+
+/* Error messages */
+#errorMessage {
+  color: #b91c1c;
+  font-size: 0.95rem;
+  margin-top: 0.3rem;
+  background: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 6px;
+  padding: 8px;
+  display: none;
+}
+
+#errorMessage.show {
+  display: block;
+}
+
+/* Generic error message styling */
+.error-message {
+  color: #6c757d;
+  font-size: 14px;
+  padding: 8px;
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  margin: 8px 0;
+}
+
+/* Footer */
+.footer-note {
+  text-align: center;
+  margin-top: 20px;
+  color: #6c757d;
+  font-size: 14px;
+}
+
+.footer-note a {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+.footer-note a:hover {
+  color: #0056b3;
+}
+
+/* Map and Results */
+#routeMap {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.06);
+  overflow: hidden;
+  width: 100%;
+  height: 400px;
+  min-height: 350px;
+  display: none;
+  margin-bottom: 1.5rem;
+}
+
+#routeMap.show {
+  display: block;
+}
+
+/* OpenChargeMap attribution styling */
+#chargingStationAttribution {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#chargingStationAttribution.show {
+  opacity: 1 !important;
+}
+
+/* Loading overlay styles */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.18);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.loading-overlay.active {
+  display: flex;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #007bff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Autocomplete suggestions */
+.autocomplete-suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 100;
+  display: none;
+}
+
+.autocomplete-suggestion {
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.autocomplete-suggestion:hover {
+  background: #f8f9fa;
+}
+
+.autocomplete-suggestion:last-child {
+  border-bottom: none;
+}
+
+/* Responsive Design */
+
+/* Large screens (desktop) */
+@media (min-width: 768px) {
+  .route-form-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .chat-btn-suggestion {
+    width: auto;
+    min-width: 100px;
+  }
+  
+  #calculateBtn {
+    width: auto;
+    max-width: 300px;
+    margin: 16px auto 0;
+  }
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 767px) {
+  main {
+    padding: 16px;
+  }
+  
+  #vehicleInfo,
+  .route-form-section,
+  #resultsSection {
+    padding: 16px;
+  }
+  
+  .route-form-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .chat-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .chat-btn-suggestion {
+    width: 100%;
+    max-width: 200px;
+  }
+  
+  #calculateBtn {
+    width: 100%;
+  }
+  
+  h1, h2 {
+    font-size: 20px;
+  }
+}
+
+/* Small screens (mobile) */
+@media (max-width: 480px) {
+  main {
+    padding: 0.7rem 0 1.2rem 0;
+  }
+  section {
+    max-width: 99vw;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .chat-messages {
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+  }
+  .chat-btn-suggestion {
+    font-size: 0.85rem;
+    padding: 0.4rem 0;
+    border-radius: 0.4rem;
+    min-width: 0;
+    max-width: 100%;
+  }
+}
+
+/* Utility classes */
+.hidden {
+  display: none !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mb-4 {
+  margin-bottom: 16px;
+}
+
+.mt-4 {
+  margin-top: 16px;
+}
+
+/* Override any conflicting Tailwind classes */
+.bg-white {
+  background-color: white !important;
+}
+
+.text-gray-800 {
+  color: #333 !important;
+}
+
+.text-gray-700 {
+  color: #333 !important;
+}
+
+.text-gray-500 {
+  color: #666 !important;
+}
+
+/* Ensure proper spacing for the existing structure */
+section {
+  margin-bottom: 20px;
+}
+
+/* Style the existing footer link */
+main > div:last-of-type {
+  text-align: center;
+  margin-top: 20px;
+  color: #6c757d;
+  font-size: 14px;
+}
+
+main > div:last-of-type a {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+main > div:last-of-type a:hover {
+  color: #0056b3;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #e5e7eb;
+  border-radius: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #fff;
+  border-radius: 6px;
+}

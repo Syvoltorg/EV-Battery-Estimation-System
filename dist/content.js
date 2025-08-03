@@ -1,0 +1,1 @@
+console.log("BMS Extension content script loaded"),chrome.runtime.onMessage.addListener((function(e,t,n){return"getPageData"===e.type&&n({title:document.title,url:window.location.href}),!0}));

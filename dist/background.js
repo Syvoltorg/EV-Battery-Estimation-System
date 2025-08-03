@@ -1,0 +1,1 @@
+chrome.runtime.onInstalled.addListener((function(){console.log("BMS Extension installed")})),chrome.action.onClicked.addListener((function(e){chrome.windows.create({url:chrome.runtime.getURL("page1/index.html"),type:"popup",width:1200,height:800})})),chrome.runtime.onMessage.addListener((function(e,t,n){return"getData"===e.type&&n({status:"success"}),!0}));

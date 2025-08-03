@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EV BES - Route Planning</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="../tailwind.min.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="leaflet.css">
+  <script src="leaflet.js"></script>
+  <script src="apikeys.js"></script>
+  <script src="script.js"></script>
+</head>
+<body class="bg-white min-h-screen font-quicksand">
+  <main class="w-full min-h-screen flex flex-col items-center px-2 md:px-0 bg-[#f7f9fb]">
+    <!-- Vehicle Info Card -->
+    <section id="vehicleInfo" class="w-full max-w-2xl bg-white rounded-2xl shadow-md p-6 md:p-8 mb-6 flex flex-col gap-2">
+      <h1 class="text-2xl font-bold mb-4 text-gray-800">Selected Vehicle</h1>
+      <div class="vehicle-info-list">
+        <div class="vehicle-info-item">Manufacturer: <span id="vehicleManufacturer"></span></div>
+        <div class="vehicle-info-item">Model: <span id="vehicleModel"></span></div>
+        <div class="vehicle-info-item">Weight: <span id="vehicleWeight"></span></div>
+        <div class="vehicle-info-item">Battery: <span id="vehicleBattery"></span></div>
+        <div class="vehicle-info-item">Range: <span id="vehicleRange"></span></div>
+        <div class="vehicle-info-item">Efficiency: <span id="vehicleEfficiency"></span></div>
+        <div class="vehicle-info-item">Energy Consumption: <span id="vehicleEnergyConsumption"></span></div>
+        <div class="vehicle-info-item">Battery SoH: <span id="vehicleSoh" class="vehicle-soh"></span></div>
+      </div>
+    </section>
+
+    <!-- Chat Section -->
+    <section class="chat-section-custom">
+      <div class="chat-messages">
+        <div class="chat-bubble bot">
+          Is the information provided about your vehicle accurate?
+        </div>
+      </div>
+      <div class="chat-actions suggestion-row flex gap-3 justify-center mb-2">
+        <button type="button" class="chat-btn-suggestion">Yes</button>
+        <button type="button" class="chat-btn-suggestion">No</button>
+      </div>
+      <div id="userResponseContainer"></div>
+    </section>
+
+    <!-- Route Form -->
+    <section class="route-form-section w-full max-w-2xl bg-white rounded-2xl shadow-md p-6 md:p-8 mb-6">
+      <form id="routeForm" class="route-form-responsive flex flex-col gap-4">
+        <div class="route-form-grid grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label for="from" class="block font-semibold mb-1">Start Location</label>
+            <input id="from" type="text" placeholder="Enter starting point" required autocomplete="off" class="w-full rounded-md border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-300">
+            <div id="from-suggestions" class="autocomplete-suggestions"></div>
+          </div>
+          <div>
+            <label for="to" class="block font-semibold mb-1">Destination</label>
+            <input id="to" type="text" placeholder="Enter destination" required autocomplete="off" class="w-full rounded-md border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-300">
+            <div id="to-suggestions" class="autocomplete-suggestions"></div>
+          </div>
+          <div>
+            <label for="drivingStyle" class="block font-semibold mb-1">Driving Style</label>
+            <select id="drivingStyle" class="w-full rounded-md border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-300">
+              <option value="normal">Normal Mode</option>
+              <option value="sport">Sport Mode</option>
+            </select>
+          </div>
+          <div>
+            <label for="roadType" class="block font-semibold mb-1">Road Type</label>
+            <select id="roadType" class="w-full rounded-md border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-300">
+              <option value="city">City Roads</option>
+              <option value="highway">Highway</option>
+              <option value="hilly">Hilly Terrain</option>
+              <option value="rural">Rural Roads</option>
+              <option value="mixed">Mixed Terrain</option>
+            </select>
+          </div>
+          <div>
+            <label for="avgSpeed" class="block font-semibold mb-1">Average Speed (km/h)</label>
+            <input id="avgSpeed" type="number" placeholder="Enter average speed" min="10" max="150" class="w-full rounded-md border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-300">
+          </div>
+          <div>
+            <label for="loadLevel" class="block font-semibold mb-1">Load Level</label>
+            <select id="loadLevel" class="w-full rounded-md border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-300">
+              <option value="light">Light Load (1-2 persons)</option>
+              <option value="medium">Medium Load (3-4 persons)</option>
+              <option value="full">Full Load (5 persons)</option>
+              <option value="cargo">With Cargo</option>
+              <option value="heavy">Heavy Load (Full + Cargo)</option>
+            </select>
+          </div>
+          <div class="md:col-span-2">
+            <label for="hvac" class="block font-semibold mb-1">HVAC Settings</label>
+            <select id="hvac" class="w-full rounded-md border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-300">
+              <option value="none">None</option>
+              <option value="ac">AC (Cooling)</option>
+              <option value="heater">Heater (Winter)</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit" id="calculateBtn" class="w-full mt-4 py-2 rounded-lg bg-blue-600 text-white font-semibold text-lg shadow hover:bg-blue-700 transition">Calculate Route</button>
+        <div id="errorMessage" class="text-red-600 mt-2"></div>
+      </form>
+    </section>
+
+    <!-- Map and Results (hidden by default, shown after calculation) -->
+    <div id="routeMap" class="w-full max-w-2xl h-[350px] rounded-xl shadow mb-6" style="display: none;"></div>
+    <!-- EV Charge Zones heading will be injected dynamically above the charging station list in resultsSection -->
+    <section id="resultsSection" class="w-full max-w-2xl bg-white rounded-2xl shadow-md p-6 md:p-8 mb-6" style="display: none;">
+      <h2 class="text-2xl font-bold mb-4 text-gray-800" id="evChargeZonesHeading" style="display:none;">EV Charge Zones</h2>
+      <div id="resultsContent" class="text-sm md:text-base"></div>
+    </section>
+    <div id="chargingStationAttribution" class="text-center mt-2 text-gray-500 text-sm opacity-70" style="display: none;">
+      Charging station data powered by <a href="https://openchargemap.org/" target="_blank" rel="noopener noreferrer" class="underline hover:text-blue-600">OpenChargeMap</a>
+    </div>
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+      <div class="spinner"></div>
+    </div>
+  </main>
+</body>
+</html>
