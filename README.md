@@ -139,6 +139,9 @@ Preview of the EV Battery Estimation System (BMS Extension) side panel:
 5. Map – Optimized route with traffic, weather, and nearby charging stations
 6. Charging Stations – Categorized as Public, Guest-only, Showroom, or Unverified
 
+## 🙌 Contributing
+Feel free to submit pull requests or open issues for any bugs or feature requests. If you add new APIs or update architecture, make sure to update the documentation too.
+
 ## 📜 License
 
 This project is licensed under the GPL v3 License.
