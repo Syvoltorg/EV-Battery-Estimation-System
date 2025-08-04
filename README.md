@@ -7,7 +7,7 @@
 A Chrome extension for Electric Vehicle (EV) battery percentage estimation, route planning, and charging station discovery.
 This extension provides real-time battery status, energy estimation, and optimized route planning using multiple data sources.
 
-## Summary
+## 📝 Summary
 
 The BMS Browser Extension helps EV users:
 
@@ -18,7 +18,7 @@ The BMS Browser Extension helps EV users:
 
 It integrates with Google Maps, Weatherstack, TomTom, and Open Charge Map APIs to enhance the EV driving experience directly from your browser.
 
-## How It Works
+## ⚙️ How It Works
 
 - Load as an unpacked extension in Chrome
 - Provides a popup interface and interactive map for user operations
@@ -26,7 +26,7 @@ It integrates with Google Maps, Weatherstack, TomTom, and Open Charge Map APIs t
 - Uses APIs for route planning, traffic, weather, and charging stations
 - Optional Python backend for advanced analytics and modular expansion
 
-## Project Structure
+## 📁 Project Structure
 
 ```text
 BMS-Browser-Extension/
