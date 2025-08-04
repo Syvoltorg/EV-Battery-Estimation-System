@@ -29,7 +29,7 @@ It integrates with Google Maps, Weatherstack, TomTom, and Open Charge Map APIs t
 ## 📁 Project Structure
 
 ```text
-BMS-Browser-Extension/
+EV-BES-Browser-Extension/
 │
 ├── manifest.json       # Extension configuration
 ├── background.js       # Background service worker
