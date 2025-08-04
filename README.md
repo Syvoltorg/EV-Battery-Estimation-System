@@ -46,7 +46,7 @@ BMS-Browser-Extension/
 └── screenshots/        # Extension screenshots
 ```
 
-## Features
+## ✨ Features
 
 ### Battery Estimation System (BES)
 - Monitor State of Health (SoH), battery efficiency, and energy consumption
@@ -68,7 +68,7 @@ BMS-Browser-Extension/
 - Clean, structured codebase with separate modules for popup UI, maps, and estimation
 - Easily extensible for new features or additional EV datasets
 
-## Installation
+## 🚀 Installation
 
 ### 1️⃣ Clone Repository
 
@@ -97,7 +97,7 @@ npm run build
 3. Click "Load Unpacked"
 4. Select the project folder
 
-## API Keys
+## 🔐 API Keys
 
 Some features, such as maps, weather data, traffic, and charging station discovery, require API keys.
 
